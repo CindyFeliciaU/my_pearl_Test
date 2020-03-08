@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}MyPearl{% endblock %}</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    {% block stylesheets %}{% endblock %}
-</head>
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
-                <a class="navbar-brand" href="{{ path("home") }}">MyPearl</a>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}MyPearl{% endblock %}</title>
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="css/base.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <script src="js/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path("home") }}">MyPearl</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">PRODUITS</a>
+                        </li>
+                        <li>
+                            <a href="#">A PROPOS</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">NEWSLETTER</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="{{ path("home") }}">ACCUEIL</a>
-                    </li>
-                    <li>
-                        <a href="#">PRODUITS</a>
-                    </li>
-                    <li>
-                        <a href="#">VOS AVIS</a>
-                    </li>
-                    <li>
-                        <a href="#">A PROPOS</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">NEWSLETTER</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-{% block body %}{% endblock %}
-</body>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
 </html>
