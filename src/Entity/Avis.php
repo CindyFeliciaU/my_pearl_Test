@@ -27,7 +27,7 @@ class Avis
     private $msg;
 
     /**
-     * @ORM\Column(type="string", length=1)
+     * @ORM\Column(type="boolean")
      */
     private $etat;
 
@@ -66,12 +66,12 @@ class Avis
         return $this;
     }
 
-    public function getEtat(): ?string
+    public function getEtat(): ?bool
     {
         return $this->etat;
     }
 
-    public function setEtat(string $etat): self
+    public function setEtat(bool $etat): self
     {
         $this->etat = $etat;
 
