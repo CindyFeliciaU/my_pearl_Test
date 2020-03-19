@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}MyPearl{% endblock %}</title>
+
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/base.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    {% block stylesheets %}{% endblock %}
-</head>
-<body>
+    </head>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -34,6 +30,7 @@
         </div>
     </div>
 </nav>
+
 {% block body %}{% endblock %}
 </body>
 </html>
