@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}MyPearl{% endblock %}</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ asset("css/bootstrap.min.css") }}" type="text/css">
+    <script src="{{ asset("js/jquery-3.4.1.slim.min.js") }}"></script>
+    <script src="{{ asset("js/popper.min.js") }}"></script>
+    <script src="{{ asset("js/bootstrap.min.js") }}"></script>
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
