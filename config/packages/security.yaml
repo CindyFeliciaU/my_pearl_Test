@@ -1,5 +1,4 @@
 security:
-
     encoders:
         App\Entity\Administrateur:
             algorithm: bcrypt
@@ -10,13 +9,11 @@ security:
             entity:
                 class: App\Entity\Administrateur
                 property: mail
-
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-
             #on protege tout le reste de l'application
             anonymous: true
             provider: in_database
@@ -37,7 +34,6 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-
-         #- { path: ^/admin, roles: ROLE_ADMIN }
-
-        # - { path: ^/profile, roles: ROLE_USER }
+        #faudra rajouter que uniquement role_admin peut acceder aux changements d'avis
+    #- { path: ^/admin, roles: ROLE_ADMIN }
+    # - { path: ^/profile, roles: ROLE_USER }

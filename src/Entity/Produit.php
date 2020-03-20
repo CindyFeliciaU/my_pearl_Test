@@ -36,19 +36,7 @@ class Produit
      */
     private $categorie;
 
-<<<<<<< HEAD
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $description;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image;
-
-=======
->>>>>>> origin/inscription
     public function getId(): ?int
     {
         return $this->id;
@@ -101,7 +89,7 @@ class Produit
 
         return $this;
     }
-<<<<<<< HEAD
+
 
     public function getDescription(): ?string
     {
@@ -126,6 +114,5 @@ class Produit
 
         return $this;
     }
-=======
->>>>>>> origin/inscription
+
 }

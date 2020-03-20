@@ -6,7 +6,13 @@
 
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/base.css" type="text/css">
-    </head>
+
+    <link rel="stylesheet" href="{{ asset("css/bootstrap.min.css") }}" type="text/css">
+    <script src="{{ asset("js/jquery-3.4.1.slim.min.js") }}"></script>
+    <script src="{{ asset("js/popper.min.js") }}"></script>
+    <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+    {% block stylesheets %}{% endblock %}
+</head>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -24,7 +30,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                    <a href="#">NEWSLETTER</a>
+                    <a href="{{ path("subscribe") }}">NEWSLETTER</a>
                 </li>
             </ul>
         </div>
@@ -33,4 +39,6 @@
 
 {% block body %}{% endblock %}
 </body>
+<link rel="stylesheet" href="{{ asset("css/base.css") }}" type="text/css">
+
 </html>
