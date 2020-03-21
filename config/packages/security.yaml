@@ -22,6 +22,7 @@ security:
                 check_path: security_login
                 username_parameter: _mail
                 password_parameter: _password
+                default_target_path: /product
             logout:
                 path: security_logout
                 target: /

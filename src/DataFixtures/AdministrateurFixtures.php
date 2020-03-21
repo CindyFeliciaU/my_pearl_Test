@@ -17,7 +17,7 @@ class AdministrateurFixtures extends Fixture
             $administrateur->setMail($faker->freeEmail)
                 ->setNom($faker->lastName)
                 ->setPrenom($faker->firstName())
-                ->setMdp($faker->password);
+                ->setPassword($faker->password);
             $manager->persist($administrateur);
         }
         $manager->flush();

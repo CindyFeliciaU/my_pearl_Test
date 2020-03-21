@@ -31,11 +31,16 @@ class Produit
      */
     private $url;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $categorie;
+    private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
 
     public function getId(): ?int
     {
@@ -77,19 +82,6 @@ class Produit
 
         return $this;
     }
-
-    public function getCategorie(): ?string
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(string $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
 
     public function getDescription(): ?string
     {

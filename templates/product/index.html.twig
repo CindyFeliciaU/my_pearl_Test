@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les produits{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+           <div  class=".col-md-3">
+            {% include 'product/_filter.html.twig'  with {form: form } only %}
+
+           </div>
+           <div class="col-md-9">
+               <div class="d-flex justify-content-end mb-2">
+                   {{ knp_pagination_sortable(product,'Prix ','p.prix') }}
+
+               </div>
+
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" >
+
+               <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-yrfSO0DBjS56u5M+SjWTyAHujrkiYVtRYh2dtB3yLQtUz3bodOeialO59u5lUCFF" crossorigin="anonymous">
+
+               <div class="container">
+    <div class="grid">
+        {% for product in product %}
+        {% include 'product/_card.html.twig' with {product: product} only %}
+        {% endfor %}
+    </div><div class="mt-4">
+                       {{ knp_pagination_render(product) }}
+                   </div>
+
+               </div>
+           </div>
+        </div>
+{% endblock %}

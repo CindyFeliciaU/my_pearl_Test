@@ -18,12 +18,13 @@ class ProduitFixtures extends Fixture implements FixtureGroupInterface
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create("fr-FR");
+
         for ($i = 0; $i < 30; $i++) {
             $produit = new Produit();
             $produit->setNom($faker->sentence())
                 ->setPrix($faker->randomFloat(2, 0, 9))
                 ->setUrl($faker->url)
-                ->setCategorie($faker->sentence(1))
+
                 ->setDescription($faker->text(255))
                 ->setImage($faker->imageUrl(640, 480, "abstract"));
             $manager->persist($produit);

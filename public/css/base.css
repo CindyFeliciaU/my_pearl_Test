@@ -1,8 +1,11 @@
 body {
-    background-image: url("../img/background.jpg");
+  /*  background-image: url("../img/background.jpg");*/
+
 }
 
 p {
     text-align: justify;
-    font-size: 30px;
+    font-size: 10px;
+
+
 }

@@ -1,0 +1,10 @@
+<div class="card" width="100" height="100">
+    <img src="{{ product.image }}" alt="" class="card-img-top" >
+<div class="card-body">
+    <h5 class="card-title">{{ product.nom }}</h5>
+    <div class="card-title" style="font-weight: bold; font-size:1.5rem;">
+        {{ product.prix | number_format(2,',',' ')}} €
+    </div>
+    <p p.text.text-muted>{{ product.description }}</p>
+</div>
+</div>
